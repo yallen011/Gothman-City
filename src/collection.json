@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "gothman-city": {
+      "description": "A blank schematic.",
+      "factory": "./gothman-city/index#gothmanCity"
+    }
+  }
+}
