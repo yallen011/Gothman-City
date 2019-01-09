@@ -1,13 +1,6 @@
 import { Rule, chain, externalSchematic, Tree, SchematicContext, noop} from '@angular-devkit/schematics';
-import { Schema as GothmanOptions } from './schema';
+import { Schema as GothmanOptions, ServiceOptions } from './schema';
 
-export interface ServiceOptions {
-  name?: string;
-  flat?: boolean;
-  lintFix?: boolean;
-  project?: string;
-  spec?: boolean;
-}
 
 function convertOptions(options:GothmanOptions): ServiceOptions{
   const serviceOptions: ServiceOptions = {

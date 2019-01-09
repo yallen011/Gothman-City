@@ -78,3 +78,11 @@ export interface Schema {
      */
     service?: string;
   }
+
+  export interface ServiceOptions {
+    name?: string;
+    flat?: boolean;
+    lintFix?: boolean;
+    project?: string;
+    spec?: boolean;
+  }
