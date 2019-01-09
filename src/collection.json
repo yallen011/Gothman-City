@@ -3,7 +3,8 @@
   "schematics": {
     "gothman-city": {
       "description": "A blank schematic.",
-      "factory": "./gothman-city/index#gothmanCity"
+      "factory": "./gothman-city/index#gothmanCity",
+      "schema": "./gothman-city/schema.json"
     }
   }
 }
