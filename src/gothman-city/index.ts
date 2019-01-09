@@ -1,4 +1,4 @@
-import { Rule, chain, externalSchematic, noop, Tree, SchematicContext} from '@angular-devkit/schematics';
+import { Rule, chain, externalSchematic, Tree, SchematicContext, noop} from '@angular-devkit/schematics';
 import { Schema as GothmanOptions } from './schema';
 
 export interface ServiceOptions {
@@ -21,13 +21,14 @@ function convertOptions(options:GothmanOptions): ServiceOptions{
 }
 
 function addService(options: GothmanOptions): Rule {
-  return options.service ? externalSchematic('@schematics/angular', 'service', convertOptions(options)) : noop();
+  return options.service ? externalSchematic('@schematics/angular', 'service', convertOptions(options)): noop();
 }
 
 function addComponent(options:GothmanOptions): Rule {
   return externalSchematic('@schematics/angular', 'component', options);
 }
 export function gothmanCity(options: GothmanOptions): Rule {
+  console.log(options);
   return (host: Tree, context: SchematicContext) => {
     return chain([
       addComponent(options),
