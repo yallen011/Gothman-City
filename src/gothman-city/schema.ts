@@ -10,7 +10,7 @@ export interface Schema {
     /**
      * The name of the component.
      */
-    name?: string;
+    name: string;
     /**
      * Specifies if the style will be in the ts file.
      */

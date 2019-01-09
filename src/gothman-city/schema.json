@@ -102,7 +102,7 @@
           "service": {
             "type": "string",
             "description": "Specifies the service name.",
-            "alias": "s"
+            "alias": "sn"
           }
     },
     "required": [
