@@ -20,6 +20,8 @@ function addService(options: GothmanOptions): Rule {
 function addComponent(options:GothmanOptions): Rule {
   return externalSchematic('@schematics/angular', 'component', options);
 }
+
+
 export function gothmanCity(options: GothmanOptions): Rule {
   console.log(options);
   return (host: Tree, context: SchematicContext) => {
